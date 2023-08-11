@@ -1,0 +1,31 @@
+lockfileVersion: 5.4
+
+importers:
+
+  .:
+    specifiers:
+      typescript: ^5.1.6
+    devDependencies:
+      typescript: registry.npmmirror.com/typescript/5.1.6
+
+  packages/pkg-a:
+    specifiers:
+      typescript: ^5.1.6
+    devDependencies:
+      typescript: registry.npmmirror.com/typescript/5.1.6
+
+  packages/pkg-b:
+    specifiers:
+      pkg-a: workspace:^1.0.0
+    devDependencies:
+      pkg-a: link:../pkg-a
+
+packages:
+
+  registry.npmmirror.com/typescript/5.1.6:
+    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/typescript/-/typescript-5.1.6.tgz}
+    name: typescript
+    version: 5.1.6
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
